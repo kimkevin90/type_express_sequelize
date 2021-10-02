@@ -1,0 +1,24 @@
+{
+  "name": "typeexpress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimkevin90/type_express_sequelize.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kimkevin90/type_express_sequelize/issues"
+  },
+  "homepage": "https://github.com/kimkevin90/type_express_sequelize#readme",
+  "devDependencies": {
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.4.3"
+  }
+}
