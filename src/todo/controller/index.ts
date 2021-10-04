@@ -6,7 +6,7 @@ class TodoController {
     const id = uuidv4();
     try {
       const record = await TodoInstance.create({ ...req.body, id });
-      return res.json({ record, meg: "Success todo" });
+      return res.json({ record, msg: "Success todo" });
     } catch (e) {
       return res.json({ msg: "fail todo", status: 500, route: "/create" });
     }
@@ -14,8 +14,8 @@ class TodoController {
 
   async readPaginantion(req: Request, res: Response) {
     try {
-      const limit = req.query.limit as number | undefined;
-      const offset = req.query.offset as number | undefined;
+      const limit = req.query?.limit as number | undefined;
+      const offset = req.query?.offset as number | undefined;
 
       const record = await TodoInstance.findAll({
         where: {},
@@ -25,7 +25,7 @@ class TodoController {
 
       return res.json(record);
     } catch (e) {
-      console.log(e);
+      return res.json({ msg: "fail todo", status: 500, route: "/read" });
     }
   }
 
